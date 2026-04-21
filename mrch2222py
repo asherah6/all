@@ -1,0 +1,95 @@
+# BIMARY SEARCH ALGRTM:
+
+lst = [8,10,11,16,20,25]
+num = 25
+ 
+def binary_search(lst, num):
+    left = 0
+    right = len(lst)-1
+    while left <= right:
+        mid = (left + right)//2
+        if lst[mid] == num:
+            return mid
+        elif lst[mid] < num:
+            left = mid + 1
+        else:
+            right = mid -1
+    return -1
+
+print(binary_search(lst, num))
+
+# Virtual environments
+# Module 9. Exceptions
+# Module 10. Files
+
+class Human:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+ 
+   
+    def running(self):
+        return "runs faster"
+   
+    def eating(self):
+        return "it eats"
+   
+ 
+ 
+ 
+human = Human("john", 23, "male")
+ 
+human1 = Human("johnny", 33, "male")
+ 
+print(human.name)
+print(human1.age)
+
+
+# Create a class Country.
+#  Class fields should store the following:
+#  country name, continent, population, calling code, capital,
+#  city names. Implement class methods for data input and output,
+#  provide access to individual fields through class methods.
+ 
+#  v1:
+class Country:
+    def __init__(self, country_name, continent, population, calling_code, capital):
+        self.country_name = country_name
+        self.continent = continent,
+        self.population= population,
+        self.calling_code = calling_code,
+        self.capital = capital
+
+country = Country()
+print(country.country_name)
+ 
+
+# v2:
+
+class Country:
+    def __init__(self):
+        self.country_name = ""
+        self.continent = ""
+        self.population= ""
+        self.calling_code = ""
+        self.capital = ""
+ 
+    def input_data(self):
+        self.country_name = input("country name :")
+    def input_data(self):
+        self.country_name = input("continent :")
+    def input_data(self):
+        self.country_name = input("population :")
+    def input_data(self):
+        self.country_name = input("calling_code :")
+    def input_data(self):
+        self.country_name = input("capital :")
+   
+    def output_data(self):
+        return f("Country name : {self.country_name}", "continent : {self.continent}", "population : {self.population}", "calling_code : {self.calling_code}", "capital : {self.capital}")
+ 
+ 
+country = Country()
+country.input_data()
+print(country.output_data())
